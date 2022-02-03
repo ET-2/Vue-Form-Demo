@@ -1,0 +1,107 @@
+/* Ethan Timothy | Vue Form Demo | 1/29/22 */
+
+.form_group {
+  width: 100%; 
+  padding: 12px;
+  border: 2px solid #ffa900;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  font-family: Rubic, Helvetica ,Roboto ,Arial ,sans-serif;
+}
+
+.form_item {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffa900;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-family: Rubic, Helvetica ,Roboto ,Arial ,sans-serif;
+  font-size: 16px;
+}
+
+.form_drop {
+  width: 25%;
+  padding: 10px;
+  border: 1px solid #ffa900;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-family: Rubic, Helvetica ,Roboto ,Arial ,sans-serif;
+  font-size: 16px;
+}
+
+.label {
+  font-size: 28px;
+}
+
+.header {
+  font-family: Rubic, Helvetica ,Roboto ,Arial ,sans-serif;
+  font-size: 24px;
+}
+
+.output {
+  width: 100%; 
+  padding: 12px;
+  border: 2px solid #ffa900;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #e6e6e6;
+  font-family: Rubic, Helvetica ,Roboto ,Arial ,sans-serif;
+}
+
+.show {
+  position: relative;
+  border: 1px solid #ffa900;
+  background-color: #ffa900;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 8px;
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+.show:hover {
+  background-color: #e69800;
+}
+
+h1 {
+  border-bottom: 1px solid black;
+}
+
+span {
+  font-size: 22px;
+}
+
+input[type=submit] {	
+  background-color: #ffa900;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #e69800;
+}

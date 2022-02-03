@@ -1,0 +1,88 @@
+<!-- Ethan Timothy | Vue Form Demo | 1/29/22 -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Form Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="myform">
+      <div class="form_group">
+
+        <!-- Div for displaying errors if not all form fields are filled out -->
+        <div v-if="userData.errors.length > 0">
+          <ul>
+            <li v-for="error in userData.errors" style="color:red">{{error}}</li>
+          </ul>
+        </div>
+
+
+        <form @submit.prevent="checkform" v-if="!userData.is_submitted">
+
+          <div class="header">
+            <h1 class="h1">Create an Account</h1>
+          </div>
+
+          <label for="full_name" class="label"> Full Name: </label><br>
+          <input type="text" id="full_name" class="form_item" v-model.lazy="userData.name" placeholder="Enter Your Full Name"><br>
+
+          <label for="email" class="label"> Email: </label><br>
+          <input type="email" id="email" class="form_item" v-model.lazy="userData.email" placeholder="Enter Your Email"><br>
+
+          <label for="password" class="label"> Password: </label><br>
+          <input v-bind:type="[userData.show_pass ? 'text' : 'password']" id="password" class="form_item" v-model.lazy="userData.password" placeholder="Enter a Password"><br>
+          <!--input type="button" class="show" value="Show" @click="userData.show_pass = !userData.show_pass"><br-->
+
+          <label for="password" class="label"> Confirm Password: </label><br>
+          <input v-bind:type="[userData.show_pass ? 'text' : 'password']" id="password2" class="form_item" v-model.lazy="userData.password2" placeholder="Confirm Password"><br>
+          <input type="button" class="show" value="Show" @click="userData.show_pass = !userData.show_pass"><br>
+
+          <label for="state" class="label"> State: </label><br>
+          <select id="state" class="form_drop" v-model.lazy="userData.state">
+            <option v-for="state in userData.states_fullName">{{ state }}</option>
+          </select><br>
+
+          <label for="occupation" class="label"> Occupation: </label><br>
+          <select id="occupation" class="form_drop" v-model.lazy="userData.occupation">
+            <option v-for="occupation in userData.occupations">{{ occupation }}</option>
+          </select><br>
+
+          <input type="submit" value="Submit">
+        </form>
+        
+
+        <!-- Only shows once all form fields have been filled and sumbitted_msg() from app.js is called -->
+        <div v-if="userData.is_submitted">
+
+          <h1 class="h1">Your profile has been created!</h1>
+
+          <div class="output">
+
+            <p class="label">Full Name: <span>{{userData.name}}</span></p>
+
+            <p class="label">Email: <span>{{userData.email}}</span></p>
+
+            <p class="label">Password: <span>{{userData.password}}</span></p>
+
+            <p class="label">State: <span>{{userData.state}}</span></p>
+
+            <p class="label">Occupation: <span>{{userData.occupation}}</span></p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+	<script src="https://unpkg.com/vue@next"></script> <!-- CDN Link for Vue.js -->
+  <script type="text/javascript" src="app.js"></script>
+
+  </body>
+</html>
